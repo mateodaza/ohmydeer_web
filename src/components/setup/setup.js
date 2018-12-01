@@ -24,10 +24,11 @@ class Setup extends Component {
 
 
   setupGame() {
-    this.setState({loading: true})
-    if(this.state.title){
+    if(this.state.title && this.state.address && this.state.time){
       if(this.state.players && this.state.players.length >=3){
-        GameActions.setupGame(this.state.title, this.state.players).then((resp)=>{
+        this.setState({loading: true})
+        GameActions.setupGame(this.state.title, this.state.players,
+          this.state.address, this.state.time).then((resp)=>{
           if(resp.status < 300){
             console.log("QUIEN TE TOCO", resp)
             this.setState({loading: false})

@@ -1,7 +1,7 @@
 import axios from "axios";
 const hostname = 'https://oh-my-deer-core.herokuapp.com'
 
-function setupGame(title, players) {
+function setupGame(title, players, address, time) {
   let url = `${hostname}/game_rooms`
   return axios({
     url: url,
@@ -12,6 +12,8 @@ function setupGame(title, players) {
     },
     data: {
       title,
+      address,
+      time,
       players
     }
   }).then(response => {
