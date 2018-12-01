@@ -33,6 +33,83 @@
 }
 
 
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.columnOneCenter {
+  float: center;
+  width: 50%;
+  padding: 10px;
+}
+
+.column4 {
+  float: left;
+  width: 40%;
+  padding: 5px;
+}
+.column2 {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  margin-bottom: 1in;
+}
+
+.backgroundSnow {
+  background-image: url("https://i.imgur.com/YeUcccQ.png");
+  background-repeat: repeat;
+  background-color: rgb(97, 177, 143);
+}
+
+.formbox {
+  width: 50%;
+  float: center;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  padding: 5px;
+  margin: 10px;
+  align-content: center;
+}
+
+.infobox {
+  width: 50%;
+  float: center;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #ffffffbf;
+  padding: 5px;
+  margin: 10px;
+  align-content: center;
+}
+
+.titleimage {
+  width: 60%;
+  height: 60%;
+  float: center;
+  margin: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  align-items: center;
+}
+
+.card {
+  width: 50%;
+  background-image: url("https://i.imgur.com/YeUcccQ.png");
+  background-repeat: repeat;
+  background-color: #57aa86ff;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

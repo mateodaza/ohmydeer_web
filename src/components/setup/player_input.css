@@ -1,60 +1,6 @@
 .player-input-container {
   display: flex;
 }
-* {
-  box-sizing: border-box;
-}
-
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-.columnOneCenter {
-  float: center;
-  width: 50%;
-  padding: 10px;
-}
-
-.column4 {
-  float: left;
-  width: 40%;
-  padding: 5px;
-}
-.column2 {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  margin-bottom: 1in;
-}
-
-.formbox {
-  width: 50%;
-  max-height: 80vh;
-  min-height: 60vh;
-  height: auto;
-  float: center;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: white;
-  align-content: center;
-}
-
-.titleimage {
-  width: 60%;
-  height: 60%;
-  float: center;
-  margin: 10px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
 .players-input-list{
   display: flex;
   justify-content: space-around;
