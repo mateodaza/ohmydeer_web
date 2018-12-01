@@ -52,9 +52,10 @@ class Setup extends Component {
       });
       if(!found) {
         let user = {name, email}
-        if(players.length == 1){
+        if(players.length == 0){
           user.owner = true
         }
+        console.log("USER", user)
         players.push(user)
         this.setState({players, players_qty: players.length})
       }else{
