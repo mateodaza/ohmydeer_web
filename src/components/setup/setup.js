@@ -36,10 +36,10 @@ class Setup extends Component {
           }
         })
       }else{
-        alert("No hay suficientes jugadores")
+        alert("Not enough players")
       }
     }else{
-      alert("Campos incompletos")
+      alert("Fill all params")
     }
   }
 
@@ -59,10 +59,10 @@ class Setup extends Component {
         players.push(user)
         this.setState({players, players_qty: players.length})
       }else{
-        alert("Usuario ya ingresado")
+        alert("User already exists")
       }
     }else{
-      alert("Email no valido")
+      alert("Not valid email")
     }
     // players.push({name, email})
     // this.setState({players, players_qty: players.length})
@@ -101,15 +101,18 @@ class Setup extends Component {
             </div>
           </div>
 
-          <div style={{maxHeight: '20vh', overflow: 'scroll'}}className="row">
+          <div style={{maxHeight: '20vh', overflow: 'auto'}}className="row">
+            <p>List</p>
             {
-              players && (
+              (players && players.lendth>0)?(
                 players.reverse().map((i,index)=>{
                   return <div className="players-input-list">
                     <p>{i.email}</p>
                     <p>{i.name}</p>
                   </div>
                 })
+              ):(
+                <p>Add some people to the party! The first one will be the owner.</p>
               )
             }
           </div>
@@ -118,7 +121,6 @@ class Setup extends Component {
             className="w3-button w3-square w3-red w3-border-red w3-round-large">Play</button>
           </div>
         </div>
-        <Link to="/">Let's go back!</Link>
       </Layout>
     );
   }

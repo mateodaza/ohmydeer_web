@@ -35,18 +35,21 @@ class GameRoom extends Component {
   }
 
   sendHint() {
-    console.log(this.state.msg, this.state.videoLink)
-    let user_id = this.state.userData.player.id
-    let friend_id = this.state.userData.friend.id
-    let hint = {
-      message: this.state.msg,
-      link: this.state.videoLink
+    if(this.state.msg, this.state.videoLink){
+      let user_id = this.state.userData.player.id
+      let friend_id = this.state.userData.friend.id
+      let hint = {
+        message: this.state.msg,
+        link: this.state.videoLink
+      }
+      GameActions.sendHint(user_id, friend_id, hint).then((resp)=>{
+        alert("Hint sent!")
+        this.setState({msg: '', videoLink: ''})
+      })
+    }else{
+      alert('Fill all params')
     }
-    GameActions.sendHint(user_id, friend_id, hint).then((resp)=>{
-      console.log("AHWHFUAHFSUA: ", resp)
-      alert("Hint sent!")
-      this.setState({msg: '', videoLink: ''})
-    })
+
   }
 
   render() {
@@ -65,7 +68,7 @@ class GameRoom extends Component {
             <div className="w3-half"><label>Score: {data.player.score}</label></div>
           </div>
           <div className="w3-row-padding">
-            <div className="w3-half"><label>Address: {data.name}</label></div>
+            <div className="w3-half"><label>Address: {data.address}</label></div>
             <div className="w3-half"><label>Date: {data.time}</label></div>
           </div>
         </div>
