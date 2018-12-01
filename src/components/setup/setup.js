@@ -103,16 +103,15 @@ class Setup extends Component {
 
           <div style={{maxHeight: '20vh', overflow: 'auto'}}className="row">
             <p>List</p>
+            <p>Add some people to the party! The first one will be the owner.</p>
             {
-              (players && players.lendth>0)?(
+              (players)&&(
                 players.reverse().map((i,index)=>{
                   return <div className="players-input-list">
                     <p>{i.email}</p>
                     <p>{i.name}</p>
                   </div>
                 })
-              ):(
-                <p>Add some people to the party! The first one will be the owner.</p>
               )
             }
           </div>
