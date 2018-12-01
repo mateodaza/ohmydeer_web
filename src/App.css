@@ -1,3 +1,6 @@
+* {
+  font-family: 'Playfair Display', serif;
+}
 .App {
   text-align: center;
 }
@@ -21,6 +24,14 @@
 .App-link {
   color: #61dafb;
 }
+
+
+.backgroundSnow {
+  background-image: url("https://i.imgur.com/YeUcccQ.png.png");
+  background-repeat: repeat;
+  background-color: rgb(97, 177, 143);
+}
+
 
 @keyframes App-logo-spin {
   from {

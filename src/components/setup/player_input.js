@@ -17,15 +17,20 @@ class PlayerInput extends Component {
 
   render() {
     return (
-      <li>
-        <div className="player-input-container">
-          <input type="email" name="email" placeholder="email" 
+      <div>
+        <div className="column4">
+         <input className="w3-input " type="email" name="email" placeholder="email" 
             onChange={this.handleChange} value={this.state.email}/>
-          <input type="text" name="name" placeholder="name" 
-            onChange={this.handleChange} value={this.state.name}/>
-          <div onClick={()=>this.props.addPlayer(this.state.name, this.state.email)}> + </div>
         </div>
-      </li>
+        <div className="column4">
+          <input className="w3-input" type="text" name="name" placeholder="name" 
+            onChange={this.handleChange} value={this.state.name}/>
+        </div>
+        <div className="column1">
+          <button  style={{margin: '2% 0'}} onClick={()=>this.props.addPlayer(this.state.name, this.state.email)}
+            className="w3-button w3-circle w3-teal">+</button>
+        </div>
+      </div>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './layout.css'
 
 const layoutStyle = {
   margin: '15px',
@@ -13,7 +14,7 @@ class Layout extends Component {
   render() {
     return (
       <div style={layoutStyle}>
-        <div style={{minHeight: '100vh'}}>
+        <div className="layout-container">
           {this.props.children}
         </div>
       </div>

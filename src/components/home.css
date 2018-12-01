@@ -1,0 +1,10 @@
+.home-btn {
+  color: white;
+}
+.home-btn * {
+  text-decoration: none;
+}
+.home-btn p {
+  font-size: 30px;
+  margin: -20vh 0;
+}

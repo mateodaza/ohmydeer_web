@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactLoading from "react-loading";
 import './loading.css'
+
 class Loading extends Component {
   constructor(props) {
     super(props);

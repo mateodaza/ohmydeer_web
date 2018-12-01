@@ -1,8 +1,8 @@
 import axios from "axios";
-const hostname = ''
+const hostname = 'https://oh-my-deer-core.herokuapp.com'
 
 function setupGame(title, players) {
-  let url = `${hostname}`
+  let url = `${hostname}/game_rooms`
   return axios({
     url: url,
     method: 'post',
@@ -21,8 +21,25 @@ function setupGame(title, players) {
   });
 }
 
+function getRoom(playerId) {
+  let url = `${hostname}/game_rooms/users/${playerId}`
+  return axios({
+    url: url,
+    method: 'get',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json',
+    }
+  }).then(response => {
+    return response
+  }).catch( error => {
+    return error.response
+  });
+}
+
 const GameActions = {
-  setupGame
+  setupGame,
+  getRoom
 };
 
 export default GameActions;
