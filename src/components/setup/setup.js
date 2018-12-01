@@ -51,7 +51,11 @@ class Setup extends Component {
         return element.email == email;
       });
       if(!found) {
-        players.push({name, email})
+        let user = {name, email}
+        if(players.length == 1){
+          user.owner = true
+        }
+        players.push(user)
         this.setState({players, players_qty: players.length})
       }else{
         alert("Usuario ya ingresado")
@@ -75,7 +79,9 @@ class Setup extends Component {
       <Layout>
         { isLoading && (<Loading />) }
         <div className="w3-container w3-center formbox centered-box w3-border w3-round-large">
-          <div className="row"><img className="titleimage" src="https://i.imgur.com/j1GLqcy.png" /></div>
+          <Link to="/"><div className="row">
+            <img className="titleimage" src="https://i.imgur.com/j1GLqcy.png" />
+          </div></Link>
           <div className="row">
             <div className="column1">
               <input className="w3-input " type="text" placeholder="Title" name="title"

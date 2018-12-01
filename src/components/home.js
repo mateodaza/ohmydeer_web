@@ -7,7 +7,9 @@ class Home extends Component {
   render() {
     return (
       <Layout>
-        <div className="logo-header"> <img src={'https://i.imgur.com/whMCxDa.png'} /></div>
+        <Link to="/"><div className="logo-header">
+         <img src={'https://i.imgur.com/whMCxDa.png'} /></div>
+        </Link>
         <img src={'https://i.imgur.com/JXCg2Hr.png'} />
         <div className="home-btn">
          <Link to="/setup"><p>GO!</p></Link>

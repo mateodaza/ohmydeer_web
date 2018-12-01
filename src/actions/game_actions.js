@@ -39,9 +39,31 @@ function getRoom(playerId) {
   });
 }
 
+function sendHint(user_id, friend_id, hint) {
+  let url = `${hostname}/hints`
+  return axios({
+    url: url,
+    method: 'post',
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json',
+    },
+    data: {
+      user_id,
+      friend_id,
+      hint
+    }
+  }).then(response => {
+    return response
+  }).catch( error => {
+    return error.response
+  });
+}
+
 const GameActions = {
   setupGame,
-  getRoom
+  getRoom,
+  sendHint
 };
 
 export default GameActions;
