@@ -14,7 +14,13 @@ class Home extends Component {
         <div className="home-btn">
          <Link to="/setup"><p>GO!</p></Link>
         </div>
-        <a style={{right: '0'}} href="http://www.freepik.com">Images and icons designed by Freepik</a>
+        <div style={{display:'flex', flexDirection: 'column', 
+          textAlign:'center', margin: '15% 0 0 0'}}>
+          <a style={{color: 'white', textDecoration: 'none'}} href="http://www.freepik.com">Images and icons designed by Freepik</a>
+          <a href="https://github.com/verynice-solutions">
+            <img width='64px' heigth='64px' src='https://i.imgur.com/I7yTBl4.png' />
+          </a>
+        </div>
       </Layout>
     );
   }

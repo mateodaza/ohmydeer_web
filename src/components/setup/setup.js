@@ -85,7 +85,7 @@ class Setup extends Component {
           </div></Link>
           <div className="row">
             <div className="column1">
-              <input className="w3-input " type="text" placeholder="Title" name="title"
+              <input className="w3-input " type="text" placeholder="Party name!" name="title"
                 onChange={this.handleChange} value={this.state.email}/>
             </div>
             <div className="column3">
@@ -93,7 +93,7 @@ class Setup extends Component {
                 onChange={this.handleChange} value={this.state.address}/>
             </div>
             <div className="column3">
-              <input className="w3-input " type="text" placeholder="Time" name="time"
+              <input className="w3-input " type="text" placeholder="Date and time" name="time"
                 onChange={this.handleChange} value={this.state.time}/>
             </div>
             <div className="column1">
@@ -103,7 +103,7 @@ class Setup extends Component {
 
           <div style={{maxHeight: '20vh', overflow: 'auto'}}className="row">
             <p>List</p>
-            <p>Add some people to the party! The first one will be the owner.</p>
+            <p style={{fontSize: '13px'}}>Exchange some gifts with your friends! The first one will be the owner.</p>
             {
               (players)&&(
                 players.reverse().map((i,index)=>{
@@ -120,7 +120,13 @@ class Setup extends Component {
             className="w3-button w3-square w3-red w3-border-red w3-round-large">Play</button>
           </div>
         </div>
-        <a style={{right: '0'}} href="http://www.freepik.com">Images and icons designed by Freepik</a>
+        <div style={{display:'flex', flexDirection: 'column', 
+          textAlign:'center', margin: '15% 0 0 0'}}>
+          <a style={{color: 'white', textDecoration: 'none'}} href="http://www.freepik.com">Images and icons designed by Freepik</a>
+          <a href="https://github.com/verynice-solutions">
+            <img width='64px' heigth='64px' src='https://i.imgur.com/I7yTBl4.png' />
+          </a>
+        </div>
       </Layout>
     );
   }

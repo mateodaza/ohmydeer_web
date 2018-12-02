@@ -60,7 +60,7 @@ class GameRoom extends Component {
     }
     return (
       <Layout>
-        <Link to="/"><div className="game-header"> <img src={'https://i.imgur.com/j1GLqcy.png'} /></div></Link>
+        <Link to="/"><div className="game-header"> <img src={'https://i.imgur.com/RpYC49f.png'} /></div></Link>
         <div style={{padding: '2% 0'}} className="w3-container w3-center infobox w3-border w3-round-large">
           <h1>{data.title}</h1>
           <div className="w3-row-padding">
@@ -84,7 +84,13 @@ class GameRoom extends Component {
             <button onClick={this.sendHint}style={{margin: '5% 0'}}
               className="w3-button w3-square w3-red w3-border-red w3-round-large w3-right-align">Send</button>
           </div>
-          <a style={{right: '0'}} href="http://www.freepik.com">Images and icons designed by Freepik</a>
+          <div style={{display:'flex', flexDirection: 'column', 
+          textAlign:'center', margin: '15% 0 0 0'}}>
+          <a style={{color: 'white', textDecoration: 'none'}} href="http://www.freepik.com">Images and icons designed by Freepik</a>
+          <a href="https://github.com/verynice-solutions">
+            <img width='64px' heigth='64px' src='https://i.imgur.com/I7yTBl4.png' />
+          </a>
+        </div>
       </Layout>
     );
   }

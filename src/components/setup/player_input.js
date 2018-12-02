@@ -19,11 +19,11 @@ class PlayerInput extends Component {
     return (
       <div>
         <div className="column4">
-         <input className="w3-input " type="email" name="email" placeholder="email" 
+         <input className="w3-input " type="email" name="email" placeholder="Email" 
             onChange={this.handleChange} value={this.state.email}/>
         </div>
         <div className="column4">
-          <input className="w3-input" type="text" name="name" placeholder="name" 
+          <input className="w3-input" type="text" name="name" placeholder="Player Name" 
             onChange={this.handleChange} value={this.state.name}/>
         </div>
         <div className="column1">
