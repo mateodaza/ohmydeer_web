@@ -14,6 +14,7 @@ class Home extends Component {
         <div className="home-btn">
          <Link to="/setup"><p>GO!</p></Link>
         </div>
+        <a style={{right: '0'}} href="http://www.freepik.com">Images and icons designed by Freepik</a>
       </Layout>
     );
   }

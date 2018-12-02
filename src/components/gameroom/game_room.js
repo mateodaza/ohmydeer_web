@@ -10,7 +10,7 @@ class GameRoom extends Component {
     super(props);
     this.state = {
       userData: [],
-      videoLink: '',
+      imageLink: '',
       msg: '',
       loading: true
     }
@@ -35,16 +35,16 @@ class GameRoom extends Component {
   }
 
   sendHint() {
-    if(this.state.msg, this.state.videoLink){
+    if(this.state.msg, this.state.imageLink){
       let user_id = this.state.userData.player.id
       let friend_id = this.state.userData.friend.id
       let hint = {
         message: this.state.msg,
-        link: this.state.videoLink
+        link: this.state.imageLink
       }
       GameActions.sendHint(user_id, friend_id, hint).then((resp)=>{
         alert("Hint sent!")
-        this.setState({msg: '', videoLink: ''})
+        this.setState({msg: '', imageLink: ''})
       })
     }else{
       alert('Fill all params')
@@ -78,12 +78,13 @@ class GameRoom extends Component {
             <div className="row">
               <input onChange={this.handleChange} value={this.state.msg} 
                 type="text" name="msg" className="w3-input" placeholder="Text" />
-              <input onChange={this.handleChange} value={this.state.videoLink} 
-                type="text" name="videoLink" className="w3-input" placeholder="VideoLink" />
+              <input onChange={this.handleChange} value={this.state.imageLink} 
+                type="text" name="imageLink" className="w3-input" placeholder="Image Link" />
             </div>
             <button onClick={this.sendHint}style={{margin: '5% 0'}}
               className="w3-button w3-square w3-red w3-border-red w3-round-large w3-right-align">Send</button>
           </div>
+          <a style={{right: '0'}} href="http://www.freepik.com">Images and icons designed by Freepik</a>
       </Layout>
     );
   }

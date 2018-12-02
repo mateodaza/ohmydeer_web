@@ -120,6 +120,7 @@ class Setup extends Component {
             className="w3-button w3-square w3-red w3-border-red w3-round-large">Play</button>
           </div>
         </div>
+        <a style={{right: '0'}} href="http://www.freepik.com">Images and icons designed by Freepik</a>
       </Layout>
     );
   }
